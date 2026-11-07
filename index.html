@@ -4,449 +4,188 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Tale Keeper - Biblioteca de livros e mundos fantásticos." />
-
   <title>Tale Keeper</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
-  <!-- ================= HEADER ================= -->
-
-  <header class="header">
-    <div class="container header-content">
-
-      <a href="#" class="logo">
-        <span class="logo-icon">♧</span>
-        <span>Tale Keeper</span>
-      </a>
-
-      <nav class="navigation">
-        <a href="#" class="active">
-          <span>⌂</span>
-          Início
-        </a>
-
-        <a href="#livros">
-          <span>▢</span>
-          Categorias
-        </a>
-
-        <a href="#autores">
-          <span>♙</span>
-          Autores
-        </a>
-
-        <a href="#contato">
-          <span>□</span>
-          Contato
-        </a>
-      </nav>
-
-      <div class="header-actions">
-
-        <div class="search-box">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Buscar livros..."
-          />
-          <button id="searchButton" aria-label="Buscar">
-            ⌕
-          </button>
-        </div>
-
-        <button class="login-button">Entrar</button>
-        <button class="register-button">Cadastrar</button>
-
-        <button class="mobile-menu" id="mobileMenu">
-          ☰
-        </button>
-
+<header class="header">
+  <div class="container header-content">
+    <a href="#" class="logo"><span class="logo-icon">♧</span><span>Tale Keeper</span></a>
+    <nav class="navigation">
+      <a href="#" class="active"><span>⌂</span> Início</a>
+      <a href="#livros"><span>▢</span> Categorias</a>
+      <a href="#minhaBiblioteca"><span>♧</span> Minha biblioteca</a>
+      <a href="#autores"><span>♙</span> Autores</a>
+      <a href="#contato"><span>□</span> Contato</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Buscar livros..." />
+        <button id="searchButton" aria-label="Buscar">⌕</button>
       </div>
+      <button class="login-button" id="loginButton">Entrar</button>
+      <button class="register-button" id="registerButton">Cadastrar</button>
+      <div class="user-area" id="userArea" hidden>
+        <span id="userEmail"></span>
+        <button class="login-button" id="logoutButton">Sair</button>
+      </div>
+      <button class="mobile-menu" id="mobileMenu">☰</button>
     </div>
-  </header>
-
-
-  <main>
-
-    <!-- ================= HERO ================= -->
-
-    <section class="hero container">
-
-      <button class="hero-arrow hero-prev" id="prevSlide">
-        ‹
-      </button>
-
-      <div class="hero-content">
-
-        <div class="hero-text">
-          <span class="hero-label">LIVRO DO MÊS</span>
-
-          <h1>
-            A SOMBRA<br />
-            DO TEMPO
-          </h1>
-
-          <p>
-            Uma jornada entre o passado e o destino.
-          </p>
-
-          <button class="primary-button">
-            VER MAIS
-          </button>
-        </div>
-
-        <div class="hero-book">
-          <div class="book-cover large-cover">
-            <div class="book-author">
-              ANA PERERNA
-            </div>
-
-            <div class="book-title">
-              A SOMBRA<br />
-              DO TEMPO
-            </div>
-
-            <div class="book-door">
-              <span>♙</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <button class="hero-arrow hero-next" id="nextSlide">
-        ›
-      </button>
-
-      <div class="hero-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-
-    </section>
-
-
-    <!-- ================= LANÇAMENTOS ================= -->
-
-    <section class="section container" id="livros">
-
-      <div class="section-title">
-        <h2>ÚLTIMOS LANÇAMENTOS</h2>
-        <div class="title-line"></div>
-        <span class="ornament">♛</span>
-      </div>
-
-      <div class="books-grid" id="booksGrid">
-
-        <!-- Livro 1 -->
-
-        <article
-          class="book-card"
-          data-title="A Cidade Perdida"
-          data-author="Lucas Mello"
-        >
-          <div class="cover cover-city">
-            <span>A CIDADE</span>
-            <strong>PERDIDA</strong>
-            <small>LUCAS MELLO</small>
-
-            <div class="cover-symbol">⌂</div>
-          </div>
-
-          <div class="book-info">
-            <h3>A Cidade Perdida</h3>
-            <p>Lucas Mello</p>
-
-            <div class="rating">
-              <span>★★★★★</span>
-              <small>4.0</small>
-            </div>
-          </div>
-        </article>
-
-
-        <!-- Livro 2 -->
-
-        <article
-          class="book-card"
-          data-title="Estrela Oculta"
-          data-author="Mariana Torres"
-        >
-          <div class="cover cover-star">
-            <span>ESTRELA</span>
-            <strong>OCULTA</strong>
-            <small>MARIANA TORRES</small>
-
-            <div class="cover-symbol">✦</div>
-          </div>
-
-          <div class="book-info">
-            <h3>Estrela Oculta</h3>
-            <p>Mariana Torres</p>
-
-            <div class="rating">
-              <span>★★★★★</span>
-              <small>5.0</small>
-            </div>
-          </div>
-        </article>
-
-
-        <!-- Livro 3 -->
-
-        <article
-          class="book-card"
-          data-title="O Segredo das Marés"
-          data-author="Paulo Almenda"
-        >
-          <div class="cover cover-sea">
-            <span>O SEGREDO</span>
-            <strong>DAS MARÉS</strong>
-            <small>PAULO ALMENDA</small>
-
-            <div class="cover-symbol">≈</div>
-          </div>
-
-          <div class="book-info">
-            <h3>O Segredo das Marés</h3>
-            <p>Paulo Almenda</p>
-
-            <div class="rating">
-              <span>★★★★<i>★</i></span>
-              <small>4.0</small>
-            </div>
-          </div>
-        </article>
-
-
-        <!-- Livro 4 -->
-
-        <article
-          class="book-card"
-          data-title="O Último Reino"
-          data-author="Carla Rocha"
-        >
-          <div class="cover cover-kingdom">
-            <span>O ÚLTIMO</span>
-            <strong>REINO</strong>
-            <small>CARLA ROCHA</small>
-
-            <div class="cover-symbol">♜</div>
-          </div>
-
-          <div class="book-info">
-            <h3>O Último Reino</h3>
-            <p>Carla Rocha</p>
-
-            <div class="rating">
-              <span>★★★★★</span>
-              <small>4.5</small>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="empty-message" id="emptyMessage">
-        Nenhum livro encontrado.
-      </div>
-
-    </section>
-
-
-    <!-- ================= RESENHAS ================= -->
-
-    <section class="section reviews-section">
-
-      <div class="container">
-
-        <div class="section-title">
-          <h2>RESENHAS DOS LEITORES</h2>
-          <div class="title-line"></div>
-        </div>
-
-        <div class="reviews-grid">
-
-          <article class="review">
-
-            <div class="avatar avatar-man">
-              JS
-            </div>
-
-            <div class="review-content">
-              <h3>João Silva</h3>
-
-              <p>
-                “Incrível! Uma leitura envolvente do início ao fim!”
-              </p>
-
-              <div class="review-stars">
-                ★★★★★
-              </div>
-            </div>
-
-          </article>
-
-
-          <article class="review">
-
-            <div class="avatar avatar-woman">
-              CR
-            </div>
-
-            <div class="review-content">
-              <h3>Carla Rocha</h3>
-
-              <p>
-                “Adorei! Mal posso esperar pelo próximo!”
-              </p>
-
-              <div class="review-stars">
-                ★★★★★
-              </div>
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= AUTORES ================= -->
-
-    <section class="authors-section container" id="autores">
-
-      <div class="section-title">
-        <h2>AUTORES EM DESTAQUE</h2>
-        <div class="title-line"></div>
-      </div>
-
-      <div class="authors-list">
-
-        <div class="author-row">
-          <span class="position gold">1</span>
-          <span>Lucas Mello</span>
-          <strong>★ 4.9</strong>
-        </div>
-
-        <div class="author-row">
-          <span class="position silver">2</span>
-          <span>Mariana Torres</span>
-          <strong>★ 4.8</strong>
-        </div>
-
-        <div class="author-row">
-          <span class="position bronze">3</span>
-          <span>Paulo Almenda</span>
-          <strong>★ 4.7</strong>
-        </div>
-
-        <div class="author-row">
-          <span class="position">4</span>
-          <span>Carla Rocha</span>
-          <strong>★ 4.6</strong>
-        </div>
-
-        <div class="author-row">
-          <span class="position">5</span>
-          <span>Ana Pererna</span>
-          <strong>★ 4.6</strong>
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer class="footer" id="contato">
-
-    <div class="container footer-content">
-
-      <div class="footer-logo">
-        <span>♧</span>
-        Tale Keeper
-      </div>
-
-      <div class="footer-links">
-        <a href="#">Início</a>
-        <a href="#livros">Categorias</a>
-        <a href="#autores">Autores</a>
-        <a href="#contato">Contato</a>
-      </div>
-
-      <p>
-        © 2024 Tale Keeper. Todos os direitos reservados.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-  <!-- ================= MODAL ================= -->
-
-  <div class="modal" id="bookModal">
-
-    <div class="modal-content">
-
-      <button class="modal-close" id="modalClose">
-        ×
-      </button>
-
-      <div class="modal-cover" id="modalCover"></div>
-
-      <div class="modal-info">
-        <span class="hero-label">DESTAQUE</span>
-
-        <h2 id="modalTitle">
-          A Sombra do Tempo
-        </h2>
-
-        <p id="modalAuthor">
-          Ana Pererna
-        </p>
-
-        <div class="rating">
-          <span>★★★★★</span>
-          <small>5.0</small>
-        </div>
-
-        <p class="modal-description">
-          Uma jornada fantástica entre mundos esquecidos,
-          segredos antigos e destinos que desafiam o tempo.
-        </p>
-
-        <button class="primary-button">
-          ADICIONAR AOS MEUS LIVROS
-        </button>
-
-      </div>
-
-    </div>
-
   </div>
+</header>
 
+<main>
+  <section class="hero container">
+    <button class="hero-arrow hero-prev" id="prevSlide">‹</button>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-label">LIVRO DO MÊS</span>
+        <h1>A SOMBRA<br />DO TEMPO</h1>
+        <p>Uma jornada entre o passado e o destino.</p>
+        <button class="primary-button" id="featuredDetails">VER MAIS</button>
+      </div>
+      <div class="hero-book">
+        <div class="book-cover large-cover">
+          <div class="book-author">ANA PERERNA</div>
+          <div class="book-title">A SOMBRA<br />DO TEMPO</div>
+          <div class="book-door"><span>♙</span></div>
+        </div>
+      </div>
+    </div>
+    <button class="hero-arrow hero-next" id="nextSlide">›</button>
+    <div class="hero-dots">
+      <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section class="section container" id="livros">
+    <div class="section-title">
+      <h2>ÚLTIMOS LANÇAMENTOS</h2><div class="title-line"></div><span class="ornament">♛</span>
+    </div>
+    <div class="books-grid" id="booksGrid">
+      <article class="book-card" data-title="A Cidade Perdida" data-author="Lucas Mello">
+        <div class="cover cover-city"><span>A CIDADE</span><strong>PERDIDA</strong><small>LUCAS MELLO</small><div class="cover-symbol">⌂</div></div>
+        <div class="book-info"><h3>A Cidade Perdida</h3><p>Lucas Mello</p><div class="rating"><span>★★★★★</span><small>4.0</small></div></div>
+      </article>
+      <article class="book-card" data-title="Estrela Oculta" data-author="Mariana Torres">
+        <div class="cover cover-star"><span>ESTRELA</span><strong>OCULTA</strong><small>MARIANA TORRES</small><div class="cover-symbol">✦</div></div>
+        <div class="book-info"><h3>Estrela Oculta</h3><p>Mariana Torres</p><div class="rating"><span>★★★★★</span><small>5.0</small></div></div>
+      </article>
+      <article class="book-card" data-title="O Segredo das Marés" data-author="Paulo Almenda">
+        <div class="cover cover-sea"><span>O SEGREDO</span><strong>DAS MARÉS</strong><small>PAULO ALMENDA</small><div class="cover-symbol">≈</div></div>
+        <div class="book-info"><h3>O Segredo das Marés</h3><p>Paulo Almenda</p><div class="rating"><span>★★★★<i>★</i></span><small>4.0</small></div></div>
+      </article>
+      <article class="book-card" data-title="O Último Reino" data-author="Carla Rocha">
+        <div class="cover cover-kingdom"><span>O ÚLTIMO</span><strong>REINO</strong><small>CARLA ROCHA</small><div class="cover-symbol">♜</div></div>
+        <div class="book-info"><h3>O Último Reino</h3><p>Carla Rocha</p><div class="rating"><span>★★★★★</span><small>4.5</small></div></div>
+      </article>
+    </div>
+    <div class="empty-message" id="emptyMessage">Nenhum livro encontrado.</div>
+  </section>
 
+  <section class="section container library-section" id="minhaBiblioteca">
+    <div class="section-title">
+      <h2>MINHA BIBLIOTECA</h2><div class="title-line"></div>
+      <button class="primary-button add-book-button" id="openAddBook">+ ADICIONAR LIVRO</button>
+    </div>
+    <p class="library-hint" id="libraryHint">Entre na sua conta para acessar e guardar seus livros.</p>
+    <div class="books-grid" id="myBooksGrid"></div>
+    <div class="empty-message" id="myBooksEmpty">Você ainda não adicionou livros à sua biblioteca.</div>
+  </section>
+
+  <section class="section reviews-section">
+    <div class="container">
+      <div class="section-title"><h2>RESENHAS DOS LEITORES</h2><div class="title-line"></div></div>
+      <div class="reviews-grid">
+        <article class="review"><div class="avatar avatar-man">JS</div><div class="review-content"><h3>João Silva</h3><p>“Incrível! Uma leitura envolvente do início ao fim!”</p><div class="review-stars">★★★★★</div></div></article>
+        <article class="review"><div class="avatar avatar-woman">CR</div><div class="review-content"><h3>Carla Rocha</h3><p>“Adorei! Mal posso esperar pelo próximo!”</p><div class="review-stars">★★★★★</div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="authors-section container" id="autores">
+    <div class="section-title"><h2>AUTORES EM DESTAQUE</h2><div class="title-line"></div></div>
+    <div class="authors-list">
+      <div class="author-row"><span class="position gold">1</span><span>Lucas Mello</span><strong>★ 4.9</strong></div>
+      <div class="author-row"><span class="position silver">2</span><span>Mariana Torres</span><strong>★ 4.8</strong></div>
+      <div class="author-row"><span class="position bronze">3</span><span>Paulo Almenda</span><strong>★ 4.7</strong></div>
+      <div class="author-row"><span class="position">4</span><span>Carla Rocha</span><strong>★ 4.6</strong></div>
+      <div class="author-row"><span class="position">5</span><span>Ana Pererna</span><strong>★ 4.6</strong></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contato">
+  <div class="container footer-content">
+    <div class="footer-logo"><span>♧</span> Tale Keeper</div>
+    <div class="footer-links"><a href="#">Início</a><a href="#livros">Categorias</a><a href="#autores">Autores</a><a href="#contato">Contato</a></div>
+    <p>© 2026 Tale Keeper. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Modal de detalhes de livro -->
+<div class="modal" id="bookModal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="modal-cover" id="modalCover"></div>
+    <div class="modal-info">
+      <span class="hero-label">DESTAQUE</span>
+      <h2 id="modalTitle">A Sombra do Tempo</h2>
+      <p id="modalAuthor">Ana Pererna</p>
+      <div class="rating"><span>★★★★★</span><small>5.0</small></div>
+      <p class="modal-description" id="modalDescription">Uma jornada fantástica entre mundos esquecidos, segredos antigos e destinos que desafiam o tempo.</p>
+      <button class="primary-button" id="saveFeaturedBook">ADICIONAR AOS MEUS LIVROS</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de login/cadastro -->
+<div class="modal" id="authModal" aria-hidden="true">
+  <div class="form-modal">
+    <button class="modal-close" id="authClose">×</button>
+    <span class="hero-label">TALE KEEPER</span>
+    <h2 id="authTitle">Entrar na sua conta</h2>
+    <form id="authForm">
+      <label for="authEmail">E-mail</label>
+      <input id="authEmail" type="email" autocomplete="email" required placeholder="seuemail@exemplo.com">
+      <label for="authPassword">Senha</label>
+      <input id="authPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="Mínimo de 6 caracteres">
+      <button class="primary-button form-submit" id="authSubmit" type="submit">ENTRAR</button>
+    </form>
+    <button class="text-button" id="switchAuthMode">Ainda não tem conta? Cadastre-se</button>
+    <button class="text-button" id="forgotPassword">Esqueci minha senha</button>
+    <p class="form-message" id="authMessage" role="status"></p>
+  </div>
+</div>
+
+<!-- Modal para adicionar livro -->
+<div class="modal" id="addBookModal" aria-hidden="true">
+  <div class="form-modal">
+    <button class="modal-close" id="addBookClose">×</button>
+    <span class="hero-label">SUA COLEÇÃO</span>
+    <h2>Adicionar livro</h2>
+    <form id="addBookForm">
+      <label for="bookTitleInput">Título *</label>
+      <input id="bookTitleInput" required maxlength="120" placeholder="Nome do livro">
+      <label for="bookAuthorInput">Autor</label>
+      <input id="bookAuthorInput" maxlength="120" placeholder="Nome do autor">
+      <label for="bookCategoryInput">Categoria</label>
+      <input id="bookCategoryInput" maxlength="60" placeholder="Fantasia, romance, aventura...">
+      <label for="bookCoverInput">Link da capa (opcional)</label>
+      <input id="bookCoverInput" type="url" placeholder="https://...">
+      <label for="bookDescriptionInput">Descrição (opcional)</label>
+      <textarea id="bookDescriptionInput" rows="3" maxlength="1000" placeholder="Sobre o livro..."></textarea>
+      <button class="primary-button form-submit" type="submit">SALVAR NA MINHA BIBLIOTECA</button>
+    </form>
+    <p class="form-message" id="bookMessage" role="status"></p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
